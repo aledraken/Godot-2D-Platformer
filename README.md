@@ -5,4 +5,7 @@
 [ ] Coyote time
 [ ] Jump buffer
 [ ] Sliding
-[ ] Acceleration and Deceleration
+[ ] Acceleration and deceleration
+[ ] Custom jump gravity
+
+[ ] More customizable camera?

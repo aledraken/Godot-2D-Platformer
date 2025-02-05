@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm04c2s5mle0n"]
+
+[ext_resource type="PackedScene" uid="uid://be3fd3h2202er" path="res://player.tscn" id="1_sp8sw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrf8p"]
+size = Vector2(1194, 20)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_sp8sw")]
+position = Vector2(617, 386)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(595, 619)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_rrf8p")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1220, 497)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(470, 48)
+shape = SubResource("RectangleShape2D_rrf8p")
+
+[node name="StaticBodyWithConstantVelocity" type="StaticBody2D" parent="."]
+position = Vector2(595, 619)
+constant_linear_velocity = Vector2(100, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBodyWithConstantVelocity"]
+position = Vector2(-835, -74)
+shape = SubResource("RectangleShape2D_rrf8p")
